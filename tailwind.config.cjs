@@ -10,9 +10,10 @@ module.exports = {
         "is-xl": 28,
         "is-l": 20,
         "is-s": 14,
+        "is-m": 16,
       },
       screens: {
-        "2xl": 1980,
+        "2xl": "1980px",
       },
     },
   },

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   FaRegUser,
@@ -25,8 +25,10 @@ const NavLinks = ({ name, path, icon }) => {
     <Link to={path}>
       <div
         className={`relative flex items-center space-x-3 my-3 ${
-          curent.pathname == path && "bg-red-500 text-white shadow-lg"
-        } p-1 rounded text-black`}
+          curent.pathname == path
+            ? "bg-red-500 text-white shadow-lg"
+            : "bg-transparent text-black"
+        } p-1 rounded`}
       >
         <span className="text-is-s">
           <Icons iconName={icon} />
@@ -37,4 +39,4 @@ const NavLinks = ({ name, path, icon }) => {
   );
 };
 
-export default NavLinks;
+export default React.memo(NavLinks);

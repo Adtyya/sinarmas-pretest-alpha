@@ -1,0 +1,24 @@
+[
+    {
+        "total_staff": 3,
+        "total_pelanggan": 780,
+        "follow_up": 72,
+        "staff":[
+            {
+                "id" : 2999012,
+                "name": "Andri",
+                "roles": "staff"
+            },
+            {
+                "id" : 99238128,
+                "name": "Hanma",
+                "roles": "staff"
+            },
+            {
+                "id" : 29912377,
+                "name": "Jack",
+                "roles": "staff"
+            }
+        ]
+    }
+]
