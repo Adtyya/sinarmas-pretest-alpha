@@ -1,32 +1,35 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 import { FaAlignJustify } from "react-icons/fa";
 import NavLinks from "./NavLists";
 
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);
-  const navList = [
-    {
-      name: "Add Staff",
-      path: "/add-staff",
-      icon: "FaRegUser",
-    },
-    {
-      name: "Add Customer",
-      path: "/add-customer",
-      icon: "FaRegSmile",
-    },
-    {
-      name: "Money Lending",
-      path: "/money-lending-customer",
-      icon: "FaRegMoneyBillAlt",
-    },
-    {
-      name: "Reports",
-      path: "/reports-all-customer",
-      icon: "FaListUl",
-    },
-  ];
+
+  const navList = useMemo(() => {
+    return [
+      {
+        name: "Add Staff",
+        path: "/add-staff",
+        icon: "FaRegUser",
+      },
+      {
+        name: "Add Customer",
+        path: "/add-customer",
+        icon: "FaRegSmile",
+      },
+      {
+        name: "Money Lending",
+        path: "/money-lending-customer",
+        icon: "FaRegMoneyBillAlt",
+      },
+      {
+        name: "Reports",
+        path: "/reports-all-customer",
+        icon: "FaListUl",
+      },
+    ];
+  });
 
   return (
     <div className="w-full h-auto block lg:flex">

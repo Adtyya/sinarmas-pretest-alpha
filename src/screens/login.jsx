@@ -25,11 +25,21 @@ const LoginScreen = () => {
         <form onSubmit={handleSubmit}>
           <div className="mb-2">
             <Label htmlFor={"email"} labelName="Email" />
-            <Input inputName="email" type="text" handleChange={handleData} />
+            <Input
+              inputName="email"
+              type="text"
+              handleChange={handleData}
+              placeholder={"admin@mail.com"}
+            />
           </div>
           <div className="mb-2">
             <Label htmlFor={"password"} labelName="Password" />
-            <Input inputName="password" type="text" handleChange={handleData} />
+            <Input
+              inputName="password"
+              type="text"
+              handleChange={handleData}
+              placeholder={"*******"}
+            />
           </div>
           <button className="mt-3 text-is-s bg-red-500 px-3 py-1 text-white rounded">
             Login
